@@ -82,7 +82,7 @@ $(document).on('ready', function() {
 	$('#check-updates').on('click', function() {
 		$.ajax ({
 			type: 'post',
-			url: '',
+			url: 'https://github.com/dgr232/my-app',
 			data: 'check_updates=1',
 			dataType: 'json',
 			timeout: 7000,
