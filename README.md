@@ -1,4 +1,6 @@
 # Asterisk CDR Viewer Mod
+По мотивам (https://github.com/prog-it/Asterisk-CDR-Viewer-Mod.git)
+кривой порт на sqlite
 
 Web-интерфейс для просмотра и прослушивания записей звонков Asterisk
 
