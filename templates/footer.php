@@ -4,7 +4,7 @@
 
 <div id="footer">
 	<div id="footer-box">
-		<a target="_blank" href="https://github.com/dgr232/Asterisk-CDR-Viewer-Mod">Asterisk CDR Viewer Mod RZD v<?php echo VERSION; ?></a>
+		<a target="_blank" href="https://github.com/dgr232/my-app">Asterisk CDR Viewer Mod RZD v<?php echo VERSION; ?></a>
 		<div title="Проверить обновления" id="check-updates"></div>
 	</div>
 </div>
