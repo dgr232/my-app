@@ -728,7 +728,7 @@ if ( isset($_REQUEST['need_chart_cc']) && $_REQUEST['need_chart_cc'] == 'true' )
 //	if ( strpos($group_by_field,'DATE_FORMAT') === false ) {
 	if ( strpos($group_by_field,'datetime') === false ) {
 		/* not date time fields */
-		$query3 = "SELECT $group_by_field AS group_by_field, count(*) AS total_calls, unix_timestamp(calldate) AS ts, duration FROM $db_table_name $where GROUP BY group_by_field, unix_timestamp(calldate) ORDER BY group_by_field ASC LIMIT $result_limit";
+		$query3 = "SELECT $group_by_field AS group_by_field, count(*) AS total_calls, datetime(calldate) AS ts, duration FROM $db_table_name $where GROUP BY group_by_field, datetime(calldate) ORDER BY group_by_field ASC LIMIT $result_limit";
 		
 		try {
 			$sth = $dbh->query($query3);
@@ -766,7 +766,7 @@ echo "\732\n";
 		$sth = null;
 	} else {
 		/* data fields */
-		$query3 = "SELECT unix_timestamp(calldate) AS ts, duration FROM $db_table_name $where ORDER BY unix_timestamp(calldate) ASC LIMIT $result_limit";
+		$query3 = "SELECT datetime(calldate) AS ts, duration FROM $db_table_name $where ORDER BY datetime(calldate) ASC LIMIT $result_limit";
 		$group_by_str = '';
 		
 		try {
